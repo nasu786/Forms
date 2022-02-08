@@ -9,7 +9,7 @@
     <title>Forms</title>
     <style>
         .validationerr{
-            border: 2px solid #ff000075;
+            border: 2px solid #eb3030;
         }
 
         .noerr {
@@ -34,12 +34,12 @@
 
                 <div class="input-areas">
                     <div>
-                        <label>First Name</label>
-                        <input class=" noerr" type="text" name="firstName" id="firstName">
+                        <label>First Name <span style="color: red;">*</span></label>
+                        <input class=" noerr" type="text" name="firstName" id="firstName" placeholder="First Name">
                     </div>
                     <div>
                         <label>Last Name</label>
-                        <input type="text" name="lastName" id="lastName">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
 
                     </div>
 
@@ -61,7 +61,8 @@
                     </div>
                     <div>
                         <label>Date Of Birth</label>
-                        <input type="date" name="dateOfBirth" id="dateOfBirth">
+                        <input type="date" name="dateOfBirth" id="dateOfBirth"
+                        min="1977-01-01" max="2022-12-31" style="cursor: pointer;">
                     </div>
 
                 </div>
@@ -69,11 +70,11 @@
                 <div class="input-areas3">
                     <div>
                         <label>Mobile Number</label>
-                        <input type="text" name="mobileNumber" id="mobileNumber">
+                        <input type="text" name="mobileNumber" id="mobileNumber" placeholder="97xxxxxx89">
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="email" id="email" placeholder="abc123@gmail.com">
 
                     </div>
 
@@ -115,9 +116,7 @@
         </div>
     </div>
 
-    <div class="saved-data">
-
-        
+    <div class="saved-data">        
 
         <table class="list" id="employeeList">
             <thead>
@@ -142,14 +141,7 @@
         </table>
 
         <button class="backbtn">Back</button>
-
-        <div class="footer">
-            
-        </div>
-
-
         
-
     </div>
 
     <script src="./sript.js"></script>
