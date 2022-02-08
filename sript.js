@@ -156,3 +156,11 @@ document.querySelector('.backbtn').addEventListener('click', function () {
     regform.setAttribute('style', ' width: 100%; visibility: visible; ')
     saveddata.setAttribute('style', '  visibility: hidden; width: 0%;')
 })
+
+//To remove the validation error
+for (const inputs of document.querySelectorAll('input')){
+    inputs.addEventListener('click', function(){
+        inputf.classList.add("noerr");
+        inputf.classList.remove("validationerr");
+    })
+}
