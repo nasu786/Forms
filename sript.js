@@ -143,6 +143,13 @@ function validate() {
     return isValid;
 }
 
+//To remove the validation error
+for (const inputs of document.querySelectorAll('input')){
+    inputs.addEventListener('click', function(){
+        inputf.classList.add("noerr");
+        inputf.classList.remove("validationerr");
+    })
+}
 
 
 //To view the saved datas
@@ -159,10 +166,4 @@ document.querySelector('.backbtn').addEventListener('click', function () {
     saveddata.setAttribute('style', '  visibility: hidden; width: 0%;')
 })
 
-//To remove the validation error
-for (const inputs of document.querySelectorAll('input')){
-    inputs.addEventListener('click', function(){
-        inputf.classList.add("noerr");
-        inputf.classList.remove("validationerr");
-    })
-}
+
