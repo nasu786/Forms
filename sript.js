@@ -4,7 +4,7 @@ const viewbtn = document.getElementById('view-btn');
 
 document.getElementById("gender").value = "";
 
-var selectedRow = null
+var selectedRow = null;
 
 function onFormSubmit() {
     if (validate()) { //validation 
