@@ -2,6 +2,8 @@ const regform = document.querySelector('.registration-from');  //Registration pa
 const saveddata = document.querySelector('.saved-data'); //Saved Data page
 const viewbtn = document.getElementById('view-btn');
 
+document.getElementById("gender").value = "";
+
 var selectedRow = null
 
 function onFormSubmit() {
