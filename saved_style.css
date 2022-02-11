@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top left, #fdfc47, #24fe41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+table {
+    width: 70%;
+    margin: 10px auto 10px auto;
+    padding: 4px;
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.16);
+    border-radius: 5px;
+
+}
+
+thead {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.16);
+    height: 60px;
+    text-align: center;
+    
+}
+
+thead tr th {
+    text-align: center;
+}
+
+tr{
+    transition: all 0.15s ease-out;
+}
+
+tr:hover {
+    transform: scale(1.01);
+    background-color: white;
+    box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.16);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+th{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+td{
+    padding: 10px;
+}
+
+td:nth-of-type(1){
+    border-radius: 5px 0px 0px 5px;
+
+}
+td:nth-of-type(11){
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+
+
+.editbtn {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.editbtn:hover {
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+}
+
+.dltbtn {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(241, 31, 31);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.dltbtn:hover {
+    box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.16);
+    cursor: pointer;
+    background-color: rgb(255, 50, 50);
+}
+
+
+.backbtn{
+    width: 15%;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .15s ease-out;
+}
+
+.backbtn:hover {
+    transform: scale(1.01);
+}
+.backbtn:active {
+    transform: scale(.95);
+}
