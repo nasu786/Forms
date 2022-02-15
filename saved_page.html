@@ -21,12 +21,12 @@
                     <div>
                         <label>First Name <span>*</span><span id="firstnameerr">First Name Must be atleast 3
                                 Letters</span></label>
-                        <input class=" noerr" type="text" name="firstName" id="firstNameUpdate" placeholder="First Name">
+                        <input class=" noerr" type="text" name="firstName" id="firstNameUpdate" placeholder="First Name" onkeyup="errindicators()">
                     </div>
                     <div class="lastname">
                         <label>Last Name <span>*</span><span id="lastnameerr">Last Name Must be atleast 3
                                 Letters</span></label>
-                        <input class=" noerr" type="text" name="lastName" id="lastNameUpdate" placeholder="Last Name">
+                        <input class=" noerr" type="text" name="lastName" id="lastNameUpdate" placeholder="Last Name" onkeyup="errindicators()">
 
                     </div>
 
@@ -55,12 +55,12 @@
                     <div>
                         <label>Mobile Number <span>*</span><span id="mobileerr">Enter a Valid 10 digit Mobile
                                 Number</span></label>
-                        <input type="text" name="mobileNumber" id="mobileNumberUpdate" placeholder="97xxxxxx89">
+                        <input type="text" name="mobileNumber" id="mobileNumberUpdate" placeholder="97xxxxxx89" onkeyup="errindicators()">
                     </div>
                     <div>
                         <label>Email ID <span>*</span><span id="emailerr">Please Enter a Valid Email
                                 Address</span></label>
-                        <input type="text" name="email" id="emailUpdate" placeholder="abc123@gmail.com">
+                        <input type="text" name="email" id="emailUpdate" placeholder="abc123@gmail.com" onkeyup="errindicators()">
 
                     </div>
 
@@ -69,7 +69,7 @@
                 <div class="input-areas3">
                     <div>
                         <label>Address <span>*</span><span id="addresserr">Must be atleast 5 characters</span></label>
-                        <input type="text" name="address" id="addressUpdate">
+                        <input type="text" name="address" id="addressUpdate" onkeyup="errindicators()">
                     </div>
 
                 </div>
@@ -78,15 +78,15 @@
 
                     <div>
                         <label>District <span>*</span><span id="districterr">Must be atleast 4 Letters</span></label>
-                        <input type="text" name="district" id="districtUpdate">
+                        <input type="text" name="district" id="districtUpdate" onkeyup="errindicators()">
                     </div>
                     <div>
                         <label>State <span>*</span><span id="stateerr">Must be atleast 4 Letters</span></label>
-                        <input type="text" name="state" id="stateUpdate" class="state">
+                        <input type="text" name="state" id="stateUpdate" onkeyup="errindicators()">
                     </div>
                     <div>
                         <label>Pincode <span>*</span><span id="pincodeerr">Must be 6 digit Numbers</span></label>
-                        <input type="text" name="pinCode" id="pinCodeUpdate">
+                        <input type="text" name="pinCode" id="pinCodeUpdate" onkeyup="errindicators()">
                     </div>
 
 
@@ -131,11 +131,7 @@
 
 
    </div>
-
-
-    
-
-    <script src="./saved_script.js"></script>
+   <script src="./saved_script.js"></script>
 
 </body>
 
