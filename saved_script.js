@@ -69,7 +69,7 @@ function onEdit(td) {
 
 function onFormSubmitUpdate() {
     if (validate()) { //validation
-        if (confirm('Are you sure want to update this record ?'))  {
+        if (confirm('Are you sure want to update this record ?')) {
             const row = [firstNameUpdate.value, lastNameUpdate.value, genderUpdate, dateOfBirthUpdate.value, mobileNumberUpdate.value, emailUpdate.value, addressUpdate.value, districtUpdate.value, stateUpdate.value, pinCodeUpdate.value]
             localStorage.setItem(`${selectedRow.rowIndex - 1}`, JSON.stringify(row))
             resetForm();
@@ -138,6 +138,14 @@ function genderselect() {
 const arr = [firstNameUpdate, lastNameUpdate, dateOfBirthUpdate, mobileNumberUpdate, emailUpdate, addressUpdate, districtUpdate, stateUpdate, pinCodeUpdate, dummyinput];
 const arr2 = [firstnameerr, lastnameerr, doberr, mobileerr, emailerr, addresserr, districterr, stateerr, pincodeerr];
 
+//Conditions or patterns to validate the input fields
+var namevalidate = /^[a-zA-Z ]{3,30}$/;
+var numbervalidate = /^([0-9]{10})+$/;
+var emailvalidate = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+var addressvalidate = /^[a-zA-Z0-9/s,. '-]{5,}$/;
+var districtvalidate = /^[a-zA-Z ]{4,20}$/;
+var statevalidate = /^[a-zA-Z ]{4,20}$/;
+var pinCodevalidate = /^([0-9]{6})+$/;
 
 function validate() {
 
@@ -162,16 +170,6 @@ function validate() {
         }
     }
 
-    //Conditions or patterns to validate the input fields
-    const namevalidate = /^[a-zA-Z ]{3,30}$/;
-    const numbervalidate = /^([0-9]{10})+$/;
-    const emailvalidate = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    const addressvalidate = /^[a-zA-Z0-9/s,. '-]{5,}$/;
-    const districtvalidate = /^[a-zA-Z ]{4,20}$/;
-    const statevalidate = /^[a-zA-Z ]{4,20}$/;
-    const pinCodevalidate = /^([0-9]{6})+$/;
-
-
     //To validate all input fields
     if ((namevalidate.test(firstNameUpdate.value)) && (namevalidate.test(lastNameUpdate.value)) && (genderUpdate) && (dateOfBirthUpdate.value.length !== 0) && (numbervalidate.test(mobileNumberUpdate.value)) && (emailvalidate.test(emailUpdate.value)) && (addressvalidate.test(addressUpdate.value)) && (districtvalidate.test(districtUpdate.value)) && (statevalidate.test(stateUpdate.value)) && (pinCodevalidate.test(pinCodeUpdate.value))) {
         isValid_all = true;
@@ -179,7 +177,13 @@ function validate() {
         isValid_all = false
     }
 
-    //To remove and indicate the errors
+    //To remove and indicate the errors(error)
+    errindicators();
+    
+    return isValidall && isValid_all;
+}
+
+function errindicators() {
     (namevalidate.test(firstNameUpdate.value)) ? firstnameerr.style.opacity = '0%' : firstnameerr.style.opacity = '100%';
     (namevalidate.test(lastNameUpdate.value)) ? lastnameerr.style.opacity = '0%' : lastnameerr.style.opacity = '100%';
     (genderUpdate) ? gendererr.style.opacity = '0%' : gendererr.style.opacity = '100%';
@@ -190,9 +194,6 @@ function validate() {
     (districtvalidate.test(districtUpdate.value)) ? districterr.style.opacity = '0%' : districterr.style.opacity = '100%';
     (statevalidate.test(stateUpdate.value)) ? stateerr.style.opacity = '0%' : stateerr.style.opacity = '100%';
     (pinCodevalidate.test(pinCodeUpdate.value)) ? pincodeerr.style.opacity = '0%' : pincodeerr.style.opacity = '100%';
-
-
-    return isValidall && isValid_all;
 }
 
 //To remove the error indicators only the input fields in focus
