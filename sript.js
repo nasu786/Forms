@@ -154,6 +154,7 @@ for (const gend of document.querySelectorAll('li')) {
 
     gend.addEventListener('click', function(){
         gendererr.style.opacity = '0%'
+        
     })
 
 }
