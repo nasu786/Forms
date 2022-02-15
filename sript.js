@@ -84,6 +84,14 @@ const dummyinput = document.getElementById('dummy');
 const arr = [firstName, lastName, dateOfBirth, mobileNumber, email, address, district, state, pinCode, dummyinput];
 const arr2 = [firstnameerr, lastnameerr, doberr, mobileerr, emailerr, addresserr, districterr, stateerr, pincodeerr];
 
+//Conditions or patterns to validate the input fields
+const namevalidate = /^[a-zA-Z ]{3,30}$/;
+const numbervalidate = /^([0-9]{10})+$/;
+const emailvalidate = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const addressvalidate = /^[a-zA-Z0-9/s,. '-]{5,}$/;
+const districtvalidate = /^[a-zA-Z ]{4,20}$/;
+const statevalidate = /^[a-zA-Z ]{4,20}$/;
+const pinCodevalidate = /^([0-9]{6})+$/;
 
 function validate() {
 
@@ -108,16 +116,6 @@ function validate() {
         } 
     }                 
 
-    //Conditions or patterns to validate the input fields
-    const namevalidate = /^[a-zA-Z ]{3,30}$/;
-    const numbervalidate = /^([0-9]{10})+$/;
-    const emailvalidate = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    const addressvalidate = /^[a-zA-Z0-9/s,. '-]{5,}$/;
-    const districtvalidate = /^[a-zA-Z ]{4,20}$/;
-    const statevalidate = /^[a-zA-Z ]{4,20}$/;
-    const pinCodevalidate = /^([0-9]{6})+$/;
-
-
     //To validate all input fields
     if ((namevalidate.test(firstName.value)) && (namevalidate.test(lastName.value)) && (gender) && (dateOfBirth.value.length !== 0)  && (numbervalidate.test(mobileNumber.value)) &&(emailvalidate.test(email.value)) && (addressvalidate.test(address.value)) && (districtvalidate.test(district.value)) && (statevalidate.test(state.value))&& (pinCodevalidate.test(pinCode.value))){
         isValid_all = true;
@@ -126,6 +124,11 @@ function validate() {
     }
 
     //To remove and indicate the errors
+    errindicators();
+    return isValidall && isValid_all;
+}
+
+function errindicators() {
     (namevalidate.test(firstName.value)) ? firstnameerr.style.opacity = '0%': firstnameerr.style.opacity = '100%';
     (namevalidate.test(lastName.value)) ? lastnameerr.style.opacity = '0%': lastnameerr.style.opacity = '100%';
     (gender) ? gendererr.style.opacity = '0%': gendererr.style.opacity = '100%';
@@ -136,9 +139,7 @@ function validate() {
     (districtvalidate.test(district.value)) ? districterr.style.opacity = '0%': districterr.style.opacity = '100%';
     (statevalidate.test(state.value)) ? stateerr.style.opacity = '0%': stateerr.style.opacity = '100%'; 
     (pinCodevalidate.test(pinCode.value)) ? pincodeerr.style.opacity = '0%': pincodeerr.style.opacity = '100%';
-
-
-    return isValidall && isValid_all;
+    
 }
 
 //To remove the error indicators only the input fields in focus
