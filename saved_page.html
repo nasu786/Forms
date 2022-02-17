@@ -11,127 +11,29 @@
 
 <body>
 
-    <div class="edit-page">
-        <div class="edit-form">
+    <table class="list" id="employeeList">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Pincode</th>
+                <th>Pincode</th>
+            </tr>
 
-            <h1>Updation Form</h1>
-            <form class="form-fields" onsubmit="event.preventDefault();onFormSubmitUpdate();" autocomplete="off">
+        </thead>
+        <tbody>
 
-                <div class="input-areas">
-                    <div>
-                        <label>First Name <span>*</span><span id="firstnameerr">First Name Must be atleast 3
-                                Letters</span></label>
-                        <input class=" noerr" type="text" name="firstName" id="firstNameUpdate" placeholder="First Name" onkeyup="errindicators()">
-                    </div>
-                    <div class="lastname">
-                        <label>Last Name <span>*</span><span id="lastnameerr">Last Name Must be atleast 3
-                                Letters</span></label>
-                        <input class=" noerr" type="text" name="lastName" id="lastNameUpdate" placeholder="Last Name" onkeyup="errindicators()">
+        </tbody>
+    </table>
 
-                    </div>
-
-                </div>
-
-                <div class="input-areas1">
-                    <div>
-                        <label>Gender <span>*</span><span id="gendererr">Please Select Gender</span></label>
-                        <div>
-                            <li><input id="male" type="radio" value="Male" name="gender" readonly
-                                    ><span>Male</span></li>
-                            <li><input id="female" type="radio" value="Female" name="gender" readonly
-                                    ><span>Female</span></li>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label>Date Of Birth <span>*</span><span id="doberr">Please Select DOB</span></label>
-                        <input type="date" name="dateOfBirth" id="dateOfBirthUpdate" min="1977-01-01" max="2022-12-31" readonly
-                            style="cursor: pointer;">
-                    </div>
-
-                </div>
-
-                <div class="input-areas2">
-                    <div>
-                        <label>Mobile Number <span>*</span><span id="mobileerr">Enter a Valid 10 digit Mobile
-                                Number</span></label>
-                        <input type="text" name="mobileNumber" id="mobileNumberUpdate" placeholder="97xxxxxx89" onkeyup="errindicators()">
-                    </div>
-                    <div>
-                        <label>Email ID <span>*</span><span id="emailerr">Please Enter a Valid Email
-                                Address</span></label>
-                        <input type="text" name="email" id="emailUpdate" placeholder="abc123@gmail.com" onkeyup="errindicators()">
-
-                    </div>
-
-                </div>
-
-                <div class="input-areas3">
-                    <div>
-                        <label>Address <span>*</span><span id="addresserr">Must be atleast 5 characters</span></label>
-                        <input type="text" name="address" id="addressUpdate" onkeyup="errindicators()">
-                    </div>
-
-                </div>
-
-                <div class="input-areas4">
-
-                    <div>
-                        <label>District <span>*</span><span id="districterr">Must be atleast 4 Letters</span></label>
-                        <input type="text" name="district" id="districtUpdate" onkeyup="errindicators()">
-                    </div>
-                    <div>
-                        <label>State <span>*</span><span id="stateerr">Must be atleast 4 Letters</span></label>
-                        <input type="text" name="state" id="stateUpdate" onkeyup="errindicators()">
-                    </div>
-                    <div>
-                        <label>Pincode <span>*</span><span id="pincodeerr">Must be 6 digit Numbers</span></label>
-                        <input type="text" name="pinCode" id="pinCodeUpdate" onkeyup="errindicators()">
-                    </div>
-
-
-                </div>
-
-
-                <div class="form-action-buttons">
-                    <input type="submit" value="Update" >
-                    <a id="back-btn">Back</a>
-                </div>
-                <input style="display: none;" id="dummy" value=""></input>
-            </form>
-
-        </div>
-
-    </div>
-
-    <div class="table-container">
-
-        <table class="list" id="employeeList">
-            <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Gender</th>
-                    <th>DOB</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>District</th>
-                    <th>State</th>
-                    <th>Pincode</th>
-                    <th>Pincode</th>
-                </tr>
-
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-
-        <a href="./index.html" class="backbtn">Back</a>
-
-
-   </div>
-   <script src="./saved_script.js"></script>
+    <a href="./index.html" onClick="back()" class="backbtn">Back</a>
+    <script src="./saved_script.js"></script>
 
 </body>
 
