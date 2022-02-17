@@ -13,17 +13,17 @@
     <div class="registration-from">
         <div class="container"> 
 
-            <h1>Registration Form</h1>
+            <h1 id="heading">Registration Form</h1>
             <form class="form-fields" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
 
                 <div class="input-areas">
                     <div>
                         <label>First Name <span>*</span><span id="firstnameerr">First Name Must be atleast 3 Letters</span></label>
-                        <input class=" noerr" type="text" name="firstName" id="firstName" placeholder="First Name" onkeyup="errindicators()">
+                        <input class=" noerr" type="text" name="firstName" id="firstName" placeholder="First Name" >
                     </div>
                     <div class="lastname">
                         <label>Last Name <span>*</span><span id="lastnameerr">Last Name Must be atleast 3 Letters</span></label>
-                        <input class=" noerr" type="text" name="lastName" id="lastName" placeholder="Last Name" onkeyup="errindicators()">
+                        <input class=" noerr" type="text" name="lastName" id="lastName" placeholder="Last Name" >
 
                     </div>
 
@@ -41,7 +41,7 @@
                     <div>
                         <label>Date Of Birth <span>*</span><span id="doberr">Please Select DOB</span></label>
                         <input type="date" name="dateOfBirth" id="dateOfBirth" min="1977-01-01" max="2022-12-31"
-                            style="cursor: pointer;" onkeyup="errindicators()">
+                            style="cursor: pointer;" >
                     </div>
 
                 </div>
@@ -49,11 +49,11 @@
                 <div class="input-areas2">
                     <div>
                         <label>Mobile Number <span>*</span><span id="mobileerr">Enter a Valid 10 digit Mobile Number</span></label>
-                        <input type="text" name="mobileNumber" id="mobileNumber" placeholder="97xxxxxx89" onkeyup="errindicators()">
+                        <input type="text" name="mobileNumber" id="mobileNumber" placeholder="97xxxxxx89" >
                     </div>
                     <div>
                         <label>Email ID <span>*</span><span id="emailerr">Please Enter a Valid Email Address</span></label>
-                        <input type="text" name="email" id="email" placeholder="abc123@gmail.com" onkeyup="errindicators()">
+                        <input type="text" name="email" id="email" placeholder="abc123@gmail.com" >
 
                     </div>
 
@@ -62,7 +62,7 @@
                 <div class="input-areas3">
                     <div>
                         <label>Address <span>*</span><span id="addresserr">Must be atleast 5 characters</span></label>
-                        <input type="text" name="address" id="address" onkeyup="errindicators()">
+                        <input type="text" name="address" id="address" >
                     </div>
 
                 </div>
@@ -71,15 +71,15 @@
 
                     <div>
                         <label>District <span>*</span><span id="districterr">Must be atleast 4 Letters</span></label>
-                        <input type="text" name="district" id="district" onkeyup="errindicators()">
+                        <input type="text" name="district" id="district" >
                     </div>
                     <div>
                         <label>State <span>*</span><span id="stateerr">Must be atleast 4 Letters</span></label>
-                        <input type="text" name="state" id="state" onkeyup="errindicators()">
+                        <input type="text" name="state" id="state" >
                     </div>
                     <div>
                         <label>Pincode <span>*</span><span id="pincodeerr">Must be 6 digit Numbers</span></label>
-                        <input type="text" name="pinCode" id="pinCode" onkeyup="errindicators()">
+                        <input type="text" name="pinCode" id="pinCode" >
                     </div>
                     
 
@@ -87,7 +87,7 @@
 
 
                 <div class="form-action-buttons">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="submit-btn">
                     <a href="./saved_page.html" id="view-btn">View</a>
                 </div>
                 <input style="display: none;" id="dummy" value=""></input>
